@@ -7,20 +7,20 @@ const {Submission} = require('./models/submission');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-
-app.post('/submission', (req, res) => {
-    const submission = new Submission({
-        comment: req.body.comment,
-        about: req.body.about
-    });
-
-    submission.save().then((doc) => {
-        res.send(doc);
-    }, (err) => {
-        res.status(400).send(err);
-    });
-});
+// app.use(bodyParser.json());
+//
+// app.post('/submission', (req, res) => {
+//     const submission = new Submission({
+//         comment: req.body.comment,
+//         about: req.body.about
+//     });
+//
+//     submission.save().then((doc) => {
+//         res.send(doc);
+//     }, (err) => {
+//         res.status(400).send(err);
+//     });
+// });
 
 app.use(function (req, res, next) {
     if (req.headers['x-forwarded-proto'] === 'https') {
