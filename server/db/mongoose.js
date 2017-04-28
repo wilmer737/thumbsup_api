@@ -4,3 +4,7 @@ const mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/TargetCWS
 
 mongoose.Promise = global.Promise;
 mongoose.connect(mongoUrl);
+
+module.exports = {
+    mongoose
+}
