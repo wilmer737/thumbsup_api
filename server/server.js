@@ -22,6 +22,14 @@ app.post('/submission', (req, res) => {
     });
 });
 
+app.get('/submission', (req, res) => {
+    Submission.find().then((submissions) => {
+        res.send(submissions);
+    }, (err) => {
+        res.status(400).send(err);
+    })
+});
+
 app.use(function (req, res, next) {
     if (req.headers['x-forwarded-proto'] === 'https') {
         res.redirect('http://' + req.hostname + req.url);
@@ -30,7 +38,7 @@ app.use(function (req, res, next) {
     }
 });
 
-app.use(express.static('app'));
+app.use(express.static('public'));
 
 app.listen(port, () => {
    console.log(`Server Running On ${port}`);

@@ -1,7 +1,7 @@
 {
   "name": "api_thumbsup",
   "version": "1.0.0",
-  "description": "",
+  "description": "API for Dummy Site",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
@@ -26,5 +26,14 @@
     "express": "^4.15.2",
     "mongodb": "^2.2.26",
     "mongoose": "^4.9.6"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "jquery": "^3.2.1",
+    "node-loader": "^0.6.0",
+    "script-loader": "^0.7.0",
+    "webpack": "^2.4.1"
   }
 }
