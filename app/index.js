@@ -1,12 +1,10 @@
 
-let request = $.ajax({
-    url: '/submission',
-    dataType: 'json',
+import React, {Component} from 'react';
+import {render} from 'react-dom';
 
-});
+import App from './components/App';
 
-request.done((data) => {
-    console.log(data);
-});
-
-// console.log(submissions);
+render(
+      <App/>,
+    document.querySelector('#app')
+);
