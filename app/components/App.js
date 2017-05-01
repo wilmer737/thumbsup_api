@@ -28,7 +28,10 @@ class App extends Component {
 
     render() {
         return(
-            <h3>React in comp</h3>
+            <div className='container'>
+                <h3>TargetCW New Fancy Site</h3>
+                <button className='btn btn-danger'>Sup</button>
+            </div>
         );
     }
 }
