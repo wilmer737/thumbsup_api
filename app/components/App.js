@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
 
-
-
-
 class App extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +14,6 @@ class App extends Component {
         let request = $.ajax({
             url: '/submission',
             dataType: 'json',
-
         });
 
         request.done((data) => {
