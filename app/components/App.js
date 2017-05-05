@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+import Nav from './Navigation';
+import Submissions from './Submissions';
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -27,10 +30,14 @@ class App extends Component {
     }
 
     render() {
+        const {submissions} = this.state;
         return(
             <div className='container'>
-                <h3>TargetCW New Fancy Site</h3>
-                <button className='btn btn-danger'>Sup</button>
+                <Nav />
+                <h3>Testimonials</h3>
+                <p>Word on the Street </p>
+                <p>Here at TargetCW, we take great care in making our clients and employee’s happy. We wanted to share with you the testimonials from those who have taken the time to express their appreciation. Below you can filter your search to find testimonials that best fit what you are looking for.</p>
+                <Submissions submissions={submissions}/>
             </div>
         );
     }
